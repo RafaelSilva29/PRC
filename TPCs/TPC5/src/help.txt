@@ -1,0 +1,8 @@
+- Construir um dataset a partir da DBPedia
+    - Nadadores (swimmer)
+        - foaf:name
+        - foaf:gender
+        - dbo:birthDate
+        - dbo:birthPlace ?
+        - dbo:deathPlace ?
+        - dbo:abstract@en

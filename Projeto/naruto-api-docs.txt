@@ -1,0 +1,831 @@
+------------------------------ Naruto API Docs ------------------------------
+
+
+Link(AWS(EC2) - API(http)) -> http://ec2-52-56-179-147.eu-west-2.compute.amazonaws.com:7000/api
+Link(AWS(EC2) - API(https)) -> https://api.naruto-prc2020.com/api
+
+Link(AWS(S3) - APP(http)) -> http://naruto-ui.s3-website.eu-west-2.amazonaws.com
+Link(AWS(S3) - APP(https)) -> https://app.naruto-prc2020.com
+
+Personagens:
+	GET /characters -> Devolve todas as personagens da bd. - DONE
+		Formato:
+			{
+		        "image": "link da web",
+		        "name": "Kakashi Hatake",
+		        "id": "Kakashi_Hatake"
+		    }
+	GET /characters/:idCharacter -> Devolve a informação toda de uma personagem. - DONE
+		Formato:
+			{
+			    "image": "link da web",
+			    "chunninGradAge": "6",
+			    "birthdate": "September 15",
+			    "personality": "text",
+			    "background": "text",
+			    "sex": "Male",
+			    "name": "Kakashi Hatake",
+			    "academyGradAge": "5",
+			    "weight": "67.5 kg",
+			    "bloodType": "O",
+			    "age": "31",
+			    "height": "181 cm",
+			    "specie": "Person",
+			    "rank": {
+			        "name": "Kage",
+			        "id": "Kage"
+			    },
+			    "clan": {
+			        "name": "Hatake",
+			        "id": "Hatake"
+			    },
+			    "occupation": [
+			        {
+			            "name": "Anbu Captain",
+			            "id": "Anbu_Captain"
+			        },
+			        {
+			            "name": "Hokage",
+			            "id": "Hokage"
+			        },
+			        {
+			            "name": "Third Division Commander of the Allied Shinobi Forces",
+			            "id": "Third_Division_Commander_of_the_Allied_Shinobi_Forces"
+			        }
+			    ],
+			    "organization": [
+			        {
+			            "name": "Allied Shinobi Forces",
+			            "id": "Allied_Shinobi_Forces"
+			        },
+			        {
+			            "name": "Root",
+			            "id": "Root"
+			        }
+			    ],
+			    "village": {
+			        "name": "Konohagakure",
+			        "id": "Konohagakure"
+			    },
+			    "natureTypes": [
+			        {
+			            "name": "Earth",
+			            "id": "Earth"
+			        },
+			        {
+			            "name": "Lightning",
+			            "id": "Lightning"
+			        },
+			        {
+			            "name": "Water",
+			            "id": "Water"
+			        },
+			        {
+			            "name": "Fire",
+			            "id": "Fire"
+			        },
+			        {
+			            "name": "Yin",
+			            "id": "Yin"
+			        },
+			        {
+			            "name": "Wind",
+			            "id": "Wind"
+			        },
+			        {
+			            "name": "Yang",
+			            "id": "Yang"
+			        }
+			    ],
+			    "kekkeiGenkai": [
+			        {
+			            "name": "Mangekyō Sharingan",
+			            "id": "Mangekyo_Sharingan"
+			        },
+			        {
+			            "name": "Sharingan",
+			            "id": "Sharingan"
+			        }
+			    ],
+			    "family": {
+			        "father": {
+			            "id": "Sakumo_Hatake",
+			            "name": "Sakumo Hatake"
+			        }
+			    },
+			    "images": [
+			        "link da web"
+			    ]
+			}
+
+Clãs:
+	GET /clans -> Devolve todas os clãs da bd. - DONE
+		Formato:
+			{
+		        "image": "link da web",
+		        "name": "Senju",
+		        "id": "Senju"
+		    }
+	GET /clans/:idClan -> Devolve a informação toda de um clã. - DONE
+		Formato:
+			{
+			    "image": "link da web",
+			    "overview": "text",
+			    "name": "Senju",
+			    "village": {
+			        "name": "Konohagakure",
+			        "id": "Konohagakure"
+			    },
+			    "kekkeiGenkai": {
+			        "name": "Wood",
+			        "id": "Wood"
+			    },
+			    "members": [
+			        {
+			            "name": "Hashirama Senju",
+			            "id": "Hashirama_Senju"
+			        },
+			        {
+			            "name": "Tobirama Senju",
+			            "id": "Tobirama_Senju"
+			        },
+			        {
+			            "name": "Tsunade",
+			            "id": "Tsunade"
+			        },
+			        {
+			            "name": "Butsuma Senju",
+			            "id": "Butsuma_Senju"
+			        },
+			        {
+			            "name": "Nawaki",
+			            "id": "Nawaki"
+			        },
+			        {
+			            "name": "Itama Senju",
+			            "id": "Itama_Senju"
+			        },
+			        {
+			            "name": "Kawarama Senju",
+			            "id": "Kawarama_Senju"
+			        },
+			        {
+			            "name": "Mito Uzumaki",
+			            "id": "Mito_Uzumaki"
+			        }
+			    ],
+			    "images": [
+			        "link da web"
+			    ]
+			}
+
+Classificações(atríbuidas às personagens):
+	GET /classifications -> Devolve todas as classificações da bd.
+		Formato:
+			{
+		        "name": "Missing-nin",
+		        "id": "Missing_nin"
+		    }
+	GET /classifications/:idClassification -> Devolve a informação toda de uma classificação.
+		Formato:
+			{
+			    "name": "Missing-nin",
+			    "description": "text"
+			}
+
+Países:
+	GET /countries -> Devolve todos os países da bd.
+		Formato:
+			{
+		        "name": "Land of Fire",
+		        "id": "Land_of_Fire"
+		    }
+	GET /countries/:idCountry -> Devolve a informação toda de um país.
+		Formato:
+			{
+			    "overview": "text",
+			    "name": "Land of Fire"
+			}
+
+Dominios:
+	GET /domains -> Devolve todos os dominios da bd.
+		Formato:
+			{
+		        "name": "Mount Myōboku",
+		        "id": "Mount_Myoboku"
+		    }
+	GET /domains/:idDomain -> Devolve a informação toda de um dominio.
+		Formato:
+			{
+			    "overview": "text",
+			    "symbol": "link da web",
+			    "image": "link da web",
+			    "name": "Mount Myōboku",
+			    "history": "text",
+			    "leader": {
+			        "name": "Gamamaru",
+			        "id": "Gamamaru"
+			    },
+			    "members": [
+			        {
+			            "name": "Gamakichi",
+			            "id": "Gamakichi"
+			        },
+			        {
+			            "name": "Fukasaku",
+			            "id": "Fukasaku"
+			        },
+			        {
+			            "name": "Shima",
+			            "id": "Shima"
+			        },
+			        {
+			            "name": "Gama",
+			            "id": "Gama"
+			        },
+			        {
+			            "name": "Gamabunta",
+			            "id": "Gamabunta"
+			        },
+			        {
+			            "name": "Gamatatsu",
+			            "id": "Gamatatsu"
+			        },
+			        {
+			            "name": "Gamagorō",
+			            "id": "Gamagoro"
+			        },
+			        {
+			            "name": "Gamahiro",
+			            "id": "Gamahiro"
+			        },
+			        {
+			            "name": "Gamaken",
+			            "id": "Gamaken"
+			        },
+			        {
+			            "name": "Gamamaru",
+			            "id": "Gamamaru"
+			        },
+			        {
+			            "name": "Gerotora",
+			            "id": "Gerotora"
+			        }
+			    ],
+			    "summoners": [
+			        {
+			            "name": "Konohamaru Sarutobi",
+			            "id": "Konohamaru_Sarutobi"
+			        },
+			        {
+			            "name": "Minato Namikaze",
+			            "id": "Minato_Namikaze"
+			        },
+			        {
+			            "name": "Naruto Uzumaki",
+			            "id": "Naruto_Uzumaki"
+			        },
+			        {
+			            "name": "Jiraiya",
+			            "id": "Jiraiya"
+			        }
+			    ]
+			}
+
+Poderes Especiais:
+	GET /kekkeiGenkais -> Devolve todos os poderes especiais da bd.
+		Formato:
+			{
+		        "name": "Mangekyō Sharingan",
+		        "id": "Mangekyo_Sharingan"
+		    }
+	GET /kekkeiGenkais/:idKekkeiGenkai -> Devolve a informação toda de um poder especial.
+		Formato:
+			{
+			    "image": "link da web",
+			    "name": "Mangekyō Sharingan",
+			    "description": "text",
+			    "classfication": "Dōjutsu",
+			    "clan": [
+			        {
+			            "name": "Ōtsutsuki",
+			            "id": "Otsutsuki"
+			        },
+			        {
+			            "name": "Uchiha",
+			            "id": "Uchiha"
+			        }
+			    ],
+			    "images": [
+			        "link da web"
+			    ]
+			}
+
+Poderes da Natureza:
+	GET /natureTypes -> Devolve todos os poderes naturais da bd.
+		Formato:
+			{
+		        "name": "Wind",
+		        "id": "Wind"
+		    }
+	GET /natureTypes/:idNatureType -> Devolve a informação toda de um poder natural.
+		Formato:
+			{
+			    "name": "Wind",
+			    "description": "text"
+			}
+
+Ocupações:
+	GET /occupations -> Devolve todos as ocupações da bd.
+		Formato:
+			{
+		        "name": "Hokage",
+		        "id": "Hokage"
+		    }
+	GET /occupations/:idOccupation -> Devolve a informação toda de uma ocupação.
+		Formato:
+			{
+			    "image": "link da web",
+			    "name": "Hokage",
+			    "description": "text",
+			    "members": [
+			        {
+			            "name": "Hashirama Senju",
+			            "id": "Hashirama_Senju"
+			        },
+			        {
+			            "name": "Hiruzen Sarutobi",
+			            "id": "Hiruzen_Sarutobi"
+			        },
+			        {
+			            "name": "Kakashi Hatake",
+			            "id": "Kakashi_Hatake"
+			        },
+			        {
+			            "name": "Minato Namikaze",
+			            "id": "Minato_Namikaze"
+			        },
+			        {
+			            "name": "Naruto Uzumaki",
+			            "id": "Naruto_Uzumaki"
+			        },
+			        {
+			            "name": "Tobirama Senju",
+			            "id": "Tobirama_Senju"
+			        },
+			        {
+			            "name": "Tsunade",
+			            "id": "Tsunade"
+			        }
+			    ]
+			}
+
+Organizações:
+	GET /organizations -> Devolve todos as organizações da bd.
+		Formato:
+			{
+		        "name": "Allied Shinobi Forces",
+		        "id": "Allied_Shinobi_Forces"
+		    }
+	GET /organizations/:idOrganizations -> Devolve a informação toda de uma organização.
+		Formato:
+			{
+			    "overview": "text",
+			    "image": "link da web",
+			    "name": "Allied Shinobi Forces",
+			    "history": "text",
+			    "leader": [
+			        {
+			            "name": "A (Fourth Raikage)",
+			            "id": "A_Fourth_Raikage"
+			        },
+			        {
+			            "name": "Gaara",
+			            "id": "Gaara"
+			        }
+			    ],
+			    "members": [
+			        {
+			            "name": "A (Fourth Raikage)",
+			            "id": "A_Fourth_Raikage"
+			        },
+			        {
+			            "name": "Killer B",
+			            "id": "Killer_B"
+			        },
+			        {
+			            "name": "Shibi Aburame",
+			            "id": "Shibi_Aburame"
+			        },
+			        {
+			            "name": "Shino Aburame",
+			            "id": "Shino_Aburame"
+			        },
+			        {
+			            "name": "Anko Mitarashi",
+			            "id": "Anko_Mitarashi"
+			        },
+			        {
+			            "name": "Iruka Umino",
+			            "id": "Iruka_Umino"
+			        },
+			        {
+			            "name": "Akamaru",
+			            "id": "Akamaru"
+			        },
+			        {
+			            "name": "Kiba Inuzuka",
+			            "id": "Kiba_Inuzuka"
+			        },
+			        {
+			            "name": "Akatsuchi",
+			            "id": "Akatsuchi"
+			        },
+			        {
+			            "name": "Kurotsuchi",
+			            "id": "Kurotsuchi"
+			        },
+			        {
+			            "name": "Chōji Akimichi",
+			            "id": "Choji_Akimichi"
+			        },
+			        {
+			            "name": "Chōza Akimichi",
+			            "id": "Choza_Akimichi"
+			        },
+			        {
+			            "name": "Karui",
+			            "id": "Karui"
+			        },
+			        {
+			            "name": "Gaara",
+			            "id": "Gaara"
+			        },
+			        {
+			            "name": "Ao",
+			            "id": "Ao"
+			        },
+			        {
+			            "name": "Aoba Yamashiro",
+			            "id": "Aoba_Yamashiro"
+			        },
+			        {
+			            "name": "Atsui",
+			            "id": "Atsui"
+			        },
+			        {
+			            "name": "C",
+			            "id": "C"
+			        },
+			        {
+			            "name": "Chōjūrō",
+			            "id": "Chojuro"
+			        },
+			        {
+			            "name": "Darui",
+			            "id": "Darui"
+			        },
+			        {
+			            "name": "Dodai",
+			            "id": "Dodai"
+			        },
+			        {
+			            "name": "Ebisu",
+			            "id": "Ebisu"
+			        },
+			        {
+			            "name": "Ensui Nara",
+			            "id": "Ensui_Nara"
+			        },
+			        {
+			            "name": "Gamakichi",
+			            "id": "Gamakichi"
+			        },
+			        {
+			            "name": "Genma Shiranui",
+			            "id": "Genma_Shiranui"
+			        },
+			        {
+			            "name": "Hana Inuzuka",
+			            "id": "Hana_Inuzuka"
+			        },
+			        {
+			            "name": "Hashirama Senju",
+			            "id": "Hashirama_Senju"
+			        },
+			        {
+			            "name": "Hiashi Hyūga",
+			            "id": "Hiashi_Hyuga"
+			        },
+			        {
+			            "name": "Hinata Hyūga",
+			            "id": "Hinata_Hyuga"
+			        },
+			        {
+			            "name": "Hiruzen Sarutobi",
+			            "id": "Hiruzen_Sarutobi"
+			        },
+			        {
+			            "name": "Ino Yamanaka",
+			            "id": "Ino_Yamanaka"
+			        },
+			        {
+			            "name": "Inoichi Yamanaka",
+			            "id": "Inoichi_Yamanaka"
+			        },
+			        {
+			            "name": "Izumo Kamizuki",
+			            "id": "Izumo_Kamizuki"
+			        },
+			        {
+			            "name": "Kakashi Hatake",
+			            "id": "Kakashi_Hatake"
+			        },
+			        {
+			            "name": "Kankurō",
+			            "id": "Kankuro"
+			        },
+			        {
+			            "name": "Katsuyu",
+			            "id": "Katsuyu"
+			        },
+			        {
+			            "name": "Kitsuchi",
+			            "id": "Kitsuchi"
+			        },
+			        {
+			            "name": "Kō Hyūga",
+			            "id": "Ko_Hyuga"
+			        },
+			        {
+			            "name": "Kotetsu Hagane",
+			            "id": "Kotetsu_Hagane"
+			        },
+			        {
+			            "name": "Mabui",
+			            "id": "Mabui"
+			        },
+			        {
+			            "name": "Matsuri",
+			            "id": "Matsuri"
+			        },
+			        {
+			            "name": "Mei Terumī",
+			            "id": "Mei_Terumī"
+			        },
+			        {
+			            "name": "Mifune",
+			            "id": "Mifune"
+			        },
+			        {
+			            "name": "Might Guy",
+			            "id": "Might_Guy"
+			        },
+			        {
+			            "name": "Minato Namikaze",
+			            "id": "Minato_Namikaze"
+			        },
+			        {
+			            "name": "Motoi",
+			            "id": "Motoi"
+			        },
+			        {
+			            "name": "Naruto Uzumaki",
+			            "id": "Naruto_Uzumaki"
+			        },
+			        {
+			            "name": "Neji Hyūga",
+			            "id": "Neji_Hyuga"
+			        },
+			        {
+			            "name": "Omoi",
+			            "id": "Omoi"
+			        },
+			        {
+			            "name": "Ōnoki",
+			            "id": "Onoki"
+			        },
+			        {
+			            "name": "Raidō Namiashi",
+			            "id": "Raido_Namiashi"
+			        },
+			        {
+			            "name": "Rock Lee",
+			            "id": "Rock_Lee"
+			        },
+			        {
+			            "name": "Sai",
+			            "id": "Sai"
+			        },
+			        {
+			            "name": "Sakura Haruno",
+			            "id": "Sakura_Haruno"
+			        },
+			        {
+			            "name": "Samui",
+			            "id": "Samui"
+			        },
+			        {
+			            "name": "Shikaku Nara",
+			            "id": "Shikaku_Nara"
+			        },
+			        {
+			            "name": "Shikamaru Nara",
+			            "id": "Shikamaru_Nara"
+			        },
+			        {
+			            "name": "Shizune",
+			            "id": "Shizune"
+			        },
+			        {
+			            "name": "Temari",
+			            "id": "Temari"
+			        },
+			        {
+			            "name": "Tenten",
+			            "id": "Tenten"
+			        },
+			        {
+			            "name": "Three Haimaru Brothers",
+			            "id": "Three_Haimaru_Brothers"
+			        },
+			        {
+			            "name": "Tobirama Senju",
+			            "id": "Tobirama_Senju"
+			        },
+			        {
+			            "name": "Tsunade",
+			            "id": "Tsunade"
+			        },
+			        {
+			            "name": "Urushi",
+			            "id": "Urushi"
+			        },
+			        {
+			            "name": "Yamato",
+			            "id": "Yamato"
+			        },
+			        {
+			            "name": "Yūgao Uzuki",
+			            "id": "Yugao_Uzuki"
+			        }
+			    ],
+			    "images": [
+			        "link da web"
+			    ]
+			}
+
+Rankings(atríbuido às personagens):
+	GET /ranks -> Devolve todos os rankings da bd.
+		Formato:
+			{
+		        "name": "Chūnin",
+		        "id": "Chunin"
+		    }
+	GET /ranks/:idRank -> Devolve a informação toda de um rank.
+		Formato:
+			{
+			    "name": "Chūnin",
+			    "description": "text"
+			}
+
+Espécies(Animais Ninja):
+	GET /species -> Devolve todas as espécies da bd.
+		Formato:
+			{
+		        "name": "Snake",
+		        "id": "Snake"
+		    }
+	GET /species/:idSpecie -> Devolve a informação toda de uma espécie.
+		Formato:
+			{
+			    "overview": "text",
+			    "image": "link da web",
+			    "name": "Snake",
+			    "members": [
+			        {
+			            "name": "Aoda",
+			            "id": "Aoda"
+			        },
+			        {
+			            "name": "Garaga",
+			            "id": "Garaga"
+			        },
+			        {
+			            "name": "Manda",
+			            "id": "Manda"
+			        },
+			        {
+			            "name": "White Snake Sage",
+			            "id": "White_Snake_Sage"
+			        },
+			        {
+			            "name": "Three Giant Snakes",
+			            "id": "Three_Giant_Snakes"
+			        }
+			    ],
+			    "summoners": [
+			        {
+			            "name": "Anko Mitarashi",
+			            "id": "Anko_Mitarashi"
+			        },
+			        {
+			            "name": "Kabuto Yakushi",
+			            "id": "Kabuto_Yakushi"
+			        },
+			        {
+			            "name": "Orochimaru",
+			            "id": "Orochimaru"
+			        },
+			        {
+			            "name": "Sasuke Uchiha",
+			            "id": "Sasuke_Uchiha"
+			        },
+			        {
+			            "name": "Boruto Uzumaki",
+			            "id": "Boruto_Uzumaki"
+			        }
+			    ]
+			}
+
+Vilas:
+	GET /villages -> Devolve todas as vilas da bd. - DONE
+		Formato:
+			{
+		        "name": "Konohagakure",
+		        "id": "Konohagakure"
+		    }
+	GET /villages/:idVillage -> Devolve a informação toda de uma vila. - DONE
+		Formato:
+			{
+			    "englishName": "The Village Hidden in the Leaves",
+			    "overview": "text",
+			    "symbol": "link da web",
+			    "image": "link da web",
+			    "statPopulation": "5",
+			    "statMilitary": "3",
+			    "name": "Konohagakure",
+			    "history": "text",
+			    "statEconomy": "2",
+			    "country": {
+			        "name": "Land of Fire",
+			        "id": "Land_of_Fire"
+			    },
+			    "leader": {
+			        "name": "Hokage",
+			        "id": "Hokage"
+			    },
+			    "clan": [
+			        {
+			            "name": "Aburame",
+			            "id": "Aburame"
+			        },
+			        {
+			            "name": "Inuzuka",
+			            "id": "Inuzuka"
+			        },
+			        {
+			            "name": "Akimichi",
+			            "id": "Akimichi"
+			        },
+			        {
+			            "name": "Uzumaki",
+			            "id": "Uzumaki"
+			        },
+			        {
+			            "name": "Sarutobi",
+			            "id": "Sarutobi"
+			        },
+			        {
+			            "name": "Senju",
+			            "id": "Senju"
+			        },
+			        {
+			            "name": "Hyūga",
+			            "id": "Hyuga"
+			        },
+			        {
+			            "name": "Shimura",
+			            "id": "Shimura"
+			        },
+			        {
+			            "name": "Nara",
+			            "id": "Nara"
+			        },
+			        {
+			            "name": "Yamanaka",
+			            "id": "Yamanaka"
+			        },
+			        {
+			            "name": "Uchiha",
+			            "id": "Uchiha"
+			        },
+			        {
+			            "name": "Hatake",
+			            "id": "Hatake"
+			        }
+			    ],
+			    "images": [
+			        "link da web"
+			    ]
+			}

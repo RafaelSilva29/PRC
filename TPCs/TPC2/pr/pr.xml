@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020::A74264::TP2</keyname>
+        <title>Povoamento ontologia de .ttl para GraphDB (arquivo-musica-digital)</title>
+        <subtitle>Relatório do trabalho prático número dois da Unidade Curricular de PRC de MIEI do ano Lectivo 2019/2020</subtitle>
+        <bdate>16/02/2020</bdate>
+        <edate>16/02/2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>a74264</identifier>
+            <name>Rafael Machado da Silva</name>
+            <email>a74264@alunos.uminho.pt</email>
+            <photo path="pr/images/rafa_photo.png"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>
+            Neste trabalho prático foi pedido para transformar a informação que está em <i>.xml</i> para <i>.ttl</i> e porventura fazer 
+            um povoamento de uma base de dados, utilizando <b>GraphDB</b>
+        </p>
+        <p>
+            O programa utiliza uma <i>.xsl(stylesheet)</i> para fazer uma "captação dos dados" e transformar em regras da ontologia criada.
+        </p>
+        <p>
+            
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="pr.html">HTML para o Project Record</deliverable>
+        <deliverable path="pr.xsl">XSL para o Project Record</deliverable>
+        <deliverable path="pr.xml">XML do Project Record</deliverable>
+        <deliverable path="../src/xml2ttl.xsl">Stylesheet da tranformação .xml para .ttl</deliverable>
+        <deliverable path="../src/arquivo-musica-digital.ttl">Ficheiro da informação em .ttl</deliverable>
+        <deliverable path="../src/arquivo-musica-digital.xml">Ficheiro da informação em .xml</deliverable>
+        <deliverable path="../src/out.txt">Ficheiro auxiliar coma informação</deliverable>
+    </deliverables>
+</pr>

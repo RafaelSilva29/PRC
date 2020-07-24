@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  .w3-container
+    .w3-card-4        
+        header.w3-container.w3-teal
+            h2 MyGraphDB
+        .w3-container
+            h3 Lista de Repositórios
+              if (repositories.length != 0)
+                each repository in repositories
+                  ul
+                    li
+                      a(href="/?idRepository="+repository.id.value)= repository.id.value
+              else
+                p Sem repositórios
+    .w3-card-4
+      .w3-row
+        if (idRepository) 
+          h3.w3-center.w3-light-grey= idRepository
+        .w3-col.s6.w3-white.w3-center
+          h3 Query
+          form.w3-container(action='/'+idRepository method='POST')
+            textarea.w3-input.w3-border.w3-light-grey(type="text" name='query' rows="10" placeholder="Introduza a sua query...")
+            br
+            input.w3-btn.w3-round.w3-blue-grey(type="submit" value="Executar")
+        .w3-col.s6.w3-white.w3-center
+          h3 Resultado
+            if (resultado)
+              #resultado
+                .w3-container.w3-border
+                  p= JSON.stringify(resultado)
+            else 
+              br
+              h4 Sem resultados
+            br
+            button.w3-button.w3-round.w3-blue-grey(onclick="empty()") Limpar
+
+      br
+      footer.w3-container.w3-teal 
+          address Gerado por MyGraphDB

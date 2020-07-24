@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020::A74264::TP8</keyname>
+        <title>Cinema2020 API-Rest</title>
+        <subtitle>Relatório do trabalho prático número oito da Unidade Curricular de PRC de MIEI do ano Lectivo 2019/2020</subtitle>
+        <bdate>29/03/2020</bdate>
+        <edate>29/03/2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>a74264</identifier>
+            <name>Rafael Machado da Silva</name>
+            <email>a74264@alunos.uminho.pt</email>
+            <photo path="pr/images/rafa_photo.png"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Neste trabalho foi-nos pedido para criarmos uma Rest-API para obter os dados da ontologia <b>cinema2020</b>.</p>
+        <p>Para esse efeito foi criado um servidor utilizando o <i>Express</i>, e foram feitas as respetivas rotas para esse servidor.</p>
+        <p>As rotas são: <i>/generos</i>, <i>/pais</i>, <i>/linguas</i>, <i>/atores</i>, <i>/atores/{:id}</i>, <i>/filmes</i>, <i>/filmes/{:id}</i>, <i>/personagens</i>, <i>/personagens/{:id}</i></p>
+        <p>O mesmo comunica com os <i>endpoints</i> do <b>GraphDB</b> e retorna os respetivos dados em <i>JSON</i>.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="pr.html">HTML para o Project Record</deliverable>
+        <deliverable path="pr/pr.xsl">XSL para o Project Record</deliverable>
+        <deliverable path="pr/pr.xml">XML do Project Record</deliverable>
+        <deliverable path="cinematecaRest/controllers/atores.js">Controller atores</deliverable>
+        <deliverable path="cinematecaRest/controllers/filmes.js">Controller filmes</deliverable>
+        <deliverable path="cinematecaRest/controllers/generos.js">Controller generos</deliverable>
+        <deliverable path="cinematecaRest/controllers/linguas.js">Controller linguas</deliverable>
+        <deliverable path="cinematecaRest/controllers/pais.js">Controller pais</deliverable>
+        <deliverable path="cinematecaRest/controllers/personagens.js">Controller personagens</deliverable>
+        <deliverable path="cinematecaRest/controllers/utils.js">Controller utils</deliverable>
+        <deliverable path="cinematecaRest/routes/atores.js">Route atores</deliverable>
+        <deliverable path="cinematecaRest/routes/filmes.js">Route filmes</deliverable>
+        <deliverable path="cinematecaRest/routes/index.js">Route index</deliverable>
+        <deliverable path="cinematecaRest/routes/personagens.js">Route personagens</deliverable>
+    </deliverables>
+</pr>

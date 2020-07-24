@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020::A74264::TP4</keyname>
+        <title>Criação de uma versão simples de GraphDB utilizado VueJS</title>
+        <subtitle>Relatório do trabalho prático número quatro da Unidade Curricular de PRC de MIEI do ano Lectivo 2019/2020</subtitle>
+        <bdate>01/03/2020</bdate>
+        <edate>01/03/2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>a74264</identifier>
+            <name>Rafael Machado da Silva</name>
+            <email>a74264@alunos.uminho.pt</email>
+            <photo path="pr/images/rafa_photo.png"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>
+            Neste projeto foi pedido para criar uma aplicação muito simples que simulasse o <b>GraphDB</b>, fazendo a respetiva query em
+            <i>SPARQL</i> e obter uma resposta do mesmo.
+        </p>
+        <p>
+            Para tal efeito foi utilizado o <i>VueJS</i> e o <i>NodeJS</i>, sendo que o primeiro faz de interface
+            com o utilzador e o segundo faz de <b>API</b> para recolher os dados dos endpoins do <b>GraphDB</b>, fazendo 
+            assim pedidos aos mesmo para obter as respotas as querys efetuadas.
+        </p>
+        <p>
+            A aplicação permite escolher qual o repositório a utlizar bem como a query que se pretend fazer,
+            os dados são dispostos em contéudo tabular, e também o possivel fazer download dos mesmos em 
+            formato <i>JSON</i> e <i>CSV</i>.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="pr.html">HTML para o Project Record</deliverable>
+        <deliverable path="pr/pr.xsl">XSL para o Project Record</deliverable>
+        <deliverable path="pr/pr.xml">XML do Project Record</deliverable>
+        <deliverable path="my-graph-db/src/components/DashBoard.vue">DashBoard principal da interface em VueJS</deliverable>
+        <deliverable path="my-graph-db/src/views/Home.vue">Home em VueJS</deliverable>
+        <deliverable path="my-graph-db/src/App.vue">App em VueJS</deliverable>
+        <deliverable path="my-graph-db/src/main.js">Ficheiro main da interface</deliverable>
+        <deliverable path="myGraphDB-API/routes/api.js">Ficheiro que contém o router da API</deliverable>
+    </deliverables>
+</pr>

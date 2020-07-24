@@ -1,0 +1,11 @@
+TPC: 
+-> Na api: controladores e rotas para:
+
+    - /atores
+    - /atores/:id
+
+Na interface:
+-> ListaAtores.vue
+-> ConsultaAtor.vue
+
+Desafio: ligar os atores aos filmes e vice-versa.

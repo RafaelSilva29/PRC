@@ -1,0 +1,50 @@
+1.
+    SELECT * WHERE {
+        ?f a dbo:Film.
+        ?f foaf:name ?fname.
+        ?f dbo:abstract ?abs.
+        filter (lang(?abs)="en").
+        ?f dbo:director ?dir.
+        ?f dbo:musicComposer ?music.
+        ?f dbo:writer ?writer.
+        ?f dbp:country ?country.
+        ?f dbp:language ?lang.
+    }
+
+
+2. (Informação de atores de um filme)
+
+    SELECT distinct ?a ?aname ?abs ?bdate WHERE {
+        ?f a dbo:Film.
+        ?f dbo:starring ?a .
+        ?a foaf:name ?aname .
+        ?a dbo:abstract ?abs.
+        filter (lang(?abs)="en").
+        ?a dbo:birthDate ?bdate.
+    
+    }
+
+    OU
+
+    SELECT distinct ?m ?mname ?abs ?wife WHERE {
+        ?f a dbo:Film.
+        ?f foaf:name ?fname.
+        ?f dbo:musicComposer ?m.
+        ?m foaf:name ?mname .
+        ?m dbo:abstract ?abs.
+        filter( lang(?abs)="en").
+        optional{
+        ?m dbo:spouse ?wife .
+    }
+
+
+DBPEdia
+ou 
+IMDB API
+ou
+OMDB API
+
+Ir buscar informação para povoar a ontologia.
+Informação sobre filmes, atores, compositores e escritores, ...
+dbpedia.org/sparql
+Pensassem numa API para esta ontologia.

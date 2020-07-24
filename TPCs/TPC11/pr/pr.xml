@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020::A74264::TP10</keyname>
+        <title>Queries - Ontologia descendents</title>
+        <subtitle>Relatório do trabalho prático número onze da Unidade Curricular de PRC de MIEI do ano Lectivo 2019/2020</subtitle>
+        <bdate>03/05/2020</bdate>
+        <edate>03/05/2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A74264</identifier>
+            <name>Rafael Machado da Silva</name>
+            <email>a74264@alunos.uminho.pt</email>
+            <photo path="pr/images/rafa_photo.png"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Este trabalho consistia em fazer queries em <b>SPARQL</b> sobre a ontoligia descendents criada.</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="pr.html">HTML para o Project Record</deliverable>
+        <deliverable path="pr/pr.xsl">XSL para o Project Record</deliverable>
+        <deliverable path="pr/pr.xml">XML do Project Record</deliverable>
+        <deliverable path="scr/queries.txt">Ficheiros queries</deliverable>
+    </deliverables>
+</pr>

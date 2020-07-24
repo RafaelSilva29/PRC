@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRC2020::A74264::TP6</keyname>
+        <title>Web Semântica</title>
+        <subtitle>Relatório do trabalho prático número seis da Unidade Curricular de PRC de MIEI do ano Lectivo 2019/2020</subtitle>
+        <bdate>15/03/2020</bdate>
+        <edate>15/03/2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>a74264</identifier>
+            <name>Rafael Machado da Silva</name>
+            <email>a74264@alunos.uminho.pt</email>
+            <photo path="pr/images/rafa_photo.png"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>O objetivo desta ficha é testar os conhecimentos adquiridos ao longo do semestre sobre Web Semântica e as tecnologias a ela associadas.</p>
+        <p>Para ter foram resolvidos quatro exercicios, que consitem em fazer queries <i>SPARQL</i> à <b>DBPedia</b>, e a construção de uma ontologia, bem como a disposição de grafos.</p> 
+    </abstract>
+    <deliverables>
+        <deliverable path="pr.html">HTML para o Project Record</deliverable>
+        <deliverable path="pr/pr.xsl">XSL para o Project Record</deliverable>
+        <deliverable path="pr/pr.xml">XML do Project Record</deliverable>
+        <deliverable path="src/ex1.png">Exercicio Nº1</deliverable>
+        <deliverable path="src/ex2/queries.txt">Exercicio Nº2 (queries)</deliverable>
+        <deliverable path="src/ex2/vamosAsCompras.ttl">Exercicio Nº2 (ontologia)</deliverable>
+        <deliverable path="src/ex3.txt">Exercicio Nº3</deliverable>
+        <deliverable path="src/ex4.txt">Exercicio Nº4</deliverable>
+        <deliverable path="http://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/fichas/prc2018-teste.html">Link da ficha</deliverable>
+    </deliverables>
+</pr>
